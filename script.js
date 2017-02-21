@@ -19,7 +19,7 @@ fs.readFile('07_fichier.json', 'utf8', function (err, data) {
 
 http.createServer(function(request, response) {
   response.writeHead(200, {"Content-Type": "text/html"});
-  response.write("<style>table,tr,th,td{border: black solid 1px}</style>");
+  response.write("<style>table,tr,th,td{border-collapse:collapse;border: black solid 1px;}</style>");
   response.write(obj);
   response.end();
 }).listen(3000);
